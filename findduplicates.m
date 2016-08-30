@@ -8,24 +8,22 @@ function [i1,i2,C,ia,ic] = findduplicates(A,varargin)
 %   [i1,i2] = FINDDUPLICATES(A,__) finds the linear indices of duplicates
 %   in input A. The accepted input arguments are the same as accepted by
 %   the unique function. The first output, i1, contains the linear indices
-%   of the first duplicate elements into the input array that correspond to
-%   the duplicates indexed by i2, the second output. i1 may contain the
-%   same index multiple times if an element exists more than twice in the
-%   input array. If no duplicates exist, i1 and i2 are returned empty.
+%   of the first duplicate elements into A that correspond to the
+%   duplicates indexed by i2, the second output. i1 may contain the same
+%   index multiple times if an element exists more than twice in A. If no
+%   duplicates exist, i1 and i2 are returned empty.
 %
 %   Examples
 %   Run findduplicatesdemo for a demonstration of FINDDUPLICATES. See the
 %   contents of findduplicatesdemo.m for details.
 %
 %   Notes
-%   The 'stable' flag of the unique function has no functionality in
-%   FINDDUPES, but is allowed for compatibility.
-%
-%   NaN are considered as non-unique by the unique function, thus they are
-%   considered non-duplicates by FINDDUPES as well.
-%
-%   For completeness the third, fourth and fifth outputs are the three
-%   ouptut of the unique function: [i1,i2,C,ia,ic] = FINDDUPLICATES(__).
+%    - The 'stable' flag of the unique function has no functionality in
+%    FINDDUPLICATES, but is allowed for compatibility.
+%    - NaN are considered as non-unique by the unique function, thus they
+%    are considered non-duplicates by FINDDUPLICATES as well.
+%    - For completeness the third, fourth and fifth outputs are the three
+%    ouptut of the unique function: [i1,i2,C,ia,ic] = FINDDUPLICATES(__).
 %
 %   See also UNIQUE, IND2SUB, FINDDUPLICATESDEMO
 
