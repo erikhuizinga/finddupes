@@ -11,4 +11,4 @@ Run `findduplicatesdemo` for a demonstration of `findduplicates`. See the conten
 ##Notes
  - The `'stable'` flag of the `unique` function has no functionality in `findduplicates`, but is allowed for compatibility.
  - `NaN` are considered as non-unique by the `unique` function, thus they are considered non-duplicates by `findduplicates` as well.
- - For completeness the third, fourth and fifth outputs are the three ouptut of the `unique` function. Use them as follows: `[i1,i2,C,ia,ic] = findduplicates(__)`.
+ - For completeness the third, fourth and fifth outputs are the three output arguments of the `unique` function. Use them as follows: `[i1,i2,C,ia,ic] = findduplicates(__)`.
