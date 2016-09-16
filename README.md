@@ -1,6 +1,6 @@
 # `findduplicates`, a MATLAB function to find linear indices of duplicates in input
 
-This function accepts the same input arguments as the [`unique`](http://mathworks.com/help/matlab/ref/unique.html) function, which is the basis for this function. `findduplicates` has two output arguments, i1 and i2.
+This function accepts the same input arguments as the [`unique`](http://mathworks.com/help/matlab/ref/unique.html) function, which is the basis for this function. `findduplicates` has two output arguments, `i1` and `i2`.
 
 ##Syntax
 `[i1,i2] = findduplicates(A,__)` finds the linear indices of duplicates in input `A`. The accepted input arguments are the same as accepted by the `unique` function. The first output, `i1`, contains the linear indices of the first duplicate elements into `A` that correspond to the duplicates indexed by `i2`, the second output. `i1` may contain the same index multiple times if an element exists more than twice in `A`. If no duplicates exist, `i1` and `i2` are returned empty.
