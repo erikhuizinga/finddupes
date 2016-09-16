@@ -23,7 +23,8 @@ function [i1,i2,C,ia,ic] = findduplicates(A,varargin)
 %    - NaN are considered as non-unique by the unique function, thus they
 %    are considered non-duplicates by FINDDUPLICATES as well.
 %    - For completeness the third, fourth and fifth outputs are the three
-%    ouptut of the unique function: [i1,i2,C,ia,ic] = FINDDUPLICATES(__).
+%    output arguments of the unique function: [i1,i2,C,ia,ic] =
+%    FINDDUPLICATES(__).
 %
 %   See also UNIQUE, IND2SUB, FINDDUPLICATESDEMO
 
