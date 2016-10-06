@@ -1,3 +1,5 @@
+[![MATLAB FEX](https://img.shields.io/badge/MATLAB%20FEX-findduplicates-blue.svg)](https://mathworks.com/matlabcentral/fileexchange/57532-findduplicates) ![R2014b support](https://img.shields.io/badge/supports-R2014b and up-brightgreen.svg)
+
 # `findduplicates`, a MATLAB function to find linear indices of duplicates in input
 
 This function accepts the same input arguments as the [`unique`](http://mathworks.com/help/matlab/ref/unique.html) function, which is the basis for this function. `findduplicates` has two output arguments, `i1` and `i2`.
