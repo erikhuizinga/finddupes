@@ -7,18 +7,18 @@ This function accepts the same input arguments as the [`unique`](http://mathwork
 ## Syntax
 
 ```MATLAB
-[i1, i2] = FINDDUPLICATES(A)
-[i1, i2] = FINDDUPLICATES(A, setOrder)
-[i1, i2] = FINDDUPLICATES(A, occurence)
-[i1, i2] = FINDDUPLICATES(A, __, 'rows')
-[i1, i2] = FINDDUPLICATES(A, 'rows', __)
-[i1, i2, C, ia, ic] = FINDDUPLICATES(__)
+[i1, i2] = findduplicates(A)
+[i1, i2] = findduplicates(A, setOrder)
+[i1, i2] = findduplicates(A, occurence)
+[i1, i2] = findduplicates(A, _, 'rows')
+[i1, i2] = findduplicates(A, 'rows', _)
+[i1, i2, C, ia, ic] = findduplicates(_)
 
-[i1, i2, C, ia, ic] = FINDDUPLICATES(A, 'legacy')
-[i1, i2, C, ia, ic] = FINDDUPLICATES(A, 'rows', 'legacy')
-[i1, i2, C, ia, ic] = FINDDUPLICATES(A, occurrence, 'legacy')
-[i1, i2, C, ia, ic] = FINDDUPLICATES(A, 'rows', occurrence, 'legacy')
-[i1, i2, C, ia, ic] = FINDDUPLICATES(A, occurrence, 'rows', 'legacy')
+[i1, i2, C, ia, ic] = findduplicates(A, 'legacy')
+[i1, i2, C, ia, ic] = findduplicates(A, 'rows', 'legacy')
+[i1, i2, C, ia, ic] = findduplicates(A, occurrence, 'legacy')
+[i1, i2, C, ia, ic] = findduplicates(A, 'rows', occurrence, 'legacy')
+[i1, i2, C, ia, ic] = findduplicates(A, occurrence, 'rows', 'legacy')
 ```
 
 ## Description
@@ -38,14 +38,14 @@ duplicates.
 `[i1, i2] = findduplicates(A, occurence)` specifies which duplicate to
 consider as the first, `occurence` can be `'first'` (default) or `'last'`.
 
-`[i1, i2] = findduplicates(A, __, 'rows')` and `[i1, i2] = findduplicates(A, 'rows', __)`
+`[i1, i2] = findduplicates(A, _, 'rows')` and `[i1, i2] = findduplicates(A, 'rows', _)`
 treat each row of `A` as a single entity
 and returns indices of duplicate rows. You must specify `A` and
 optionally can specify `setOrder` or `occurence`. The `'rows'` option does
 not support `cell` arrays.
 
-`[i1, i2, C, ia, ic] = findduplicates(__)` also returns `C`, `ia` and `ic`
-such that `[C, ia, ic] = unique(__)`. See the documentation for `unique`
+`[i1, i2, C, ia, ic] = findduplicates(_)` also returns `C`, `ia` and `ic`
+such that `[C, ia, ic] = unique(_)`. See the documentation for `unique`
 for their meaning and use.
 
 The syntaxes with the `'legacy'` option preserve the behaviour this
@@ -82,8 +82,8 @@ findduplicatesdemo.m for details.
 
 ## Notes
 
- - `NaN` are considered as distinct values by the `unique` function, thus
- they are considered non-duplicates by `findduplicates` as well.
+`NaN` are considered as distinct values by the `unique` function, thus
+they are considered non-duplicates by `findduplicates` as well.
 
 ## Licence
 
