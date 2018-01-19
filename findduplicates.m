@@ -5,6 +5,19 @@
 %
 %   Syntax
 %
+%   [i1, i2] = FINDDUPLICATES(A)
+%   [i1, i2] = FINDDUPLICATES(A, setOrder)
+%   [i1, i2] = FINDDUPLICATES(A, occurence)
+%   [i1, i2] = FINDDUPLICATES(A, __, 'rows')
+%   [i1, i2] = FINDDUPLICATES(A, 'rows', __)
+%   [i1, i2, C, ia, ic] = FINDDUPLICATES(__)
+%
+%   [i1, i2, C, ia, ic] = FINDDUPLICATES(A, 'legacy')
+%   [i1, i2, C, ia, ic] = FINDDUPLICATES(A, 'rows', 'legacy')
+%   [i1, i2, C, ia, ic] = FINDDUPLICATES(A, occurrence, 'legacy')
+%   [i1, i2, C, ia, ic] = FINDDUPLICATES(A, 'rows', occurrence, 'legacy')
+%   [i1, i2, C, ia, ic] = FINDDUPLICATES(A, occurrence, 'rows', 'legacy')
+%
 %   [i1, i2] = FINDDUPLICATES(A) finds the linear indices of duplicates
 %   in input A. The accepted input arguments are the same as accepted by
 %   the unique function. The first output, i1, contains the linear indices
@@ -19,6 +32,21 @@
 %
 %   [i1, i2] = FINDDUPLICATES(A, occurence) specifies which duplicate to
 %   consider as the first, occurence can be 'first' (default) or 'last'.
+%
+%   [i1, i2] = FINDDUPLICATES(A, __, 'rows') and [i1, i2] = 
+%   FINDDUPLICATES(A, 'rows', __) treat each row of A as a single entity
+%   and returns indices of duplicate rows. You must specify A and
+%   optionally can specify setOrder or occurence. The 'rows' option does
+%   not support cell arrays.
+%
+%   [i1, i2, C, ia, ic] = FINDDUPLICATES(__) also returns C, ia and ic
+%   such that [C, ia, ic] = unique(__). See the documentation for unique
+%   for their meaning and use.
+%
+%   The syntaxes with the 'legacy' option preserve the behaviour this
+%   function would have on R2012b and prior releases. The 'legacy' option
+%   does not support categorical arrays, datetime arrays, duration arrays,
+%   tables or timetables.
 %
 %   Examples
 %
