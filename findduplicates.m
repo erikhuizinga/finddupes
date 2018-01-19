@@ -55,7 +55,7 @@
 %   Find first indices of duplicates and the other duplicates' indices:
 %
 %   A = [9, 2, 9, 5]
-%   [i1, i2] = findduplicates(A)
+%   [i1, i2] = FINDDUPLICATES(A)
 %
 %   Result
 %
@@ -77,8 +77,8 @@
 %
 %   Notes
 %
-%    - NaN are considered as distinct values by the unique function, thus
-%    they are considered non-duplicates by FINDDUPLICATES as well.
+%   NaN are considered as distinct values by the unique function, thus
+%   they are considered non-duplicates by FINDDUPLICATES as well.
 %
 %   See also UNIQUE, IND2SUB, FINDDUPLICATESDEMO
 
