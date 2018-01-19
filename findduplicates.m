@@ -52,7 +52,8 @@
 %
 %   Examples
 %
-%   Find first indices of duplicates and the other duplicates' indices:
+%   Find the first indices of duplicates and the other duplicates'
+%   indices:
 %
 %   A = [9, 2, 9, 5]
 %   [i1, i2] = FINDDUPLICATES(A)
@@ -70,6 +71,29 @@
 %
 %   This indicates that the first element in A has a duplicate at the
 %   third element.
+%
+%   Find the last indices of duplicate character arrays and the other
+%   duplicate's indices:
+%
+%   names = {'Charlie', 'Alice', 'Bob', 'Alice', 'Alice', 'Charlie'};
+%   [i1, i2] = FINDDUPLICATES(names, 'last')
+%
+%   Result
+%
+%   i1 =
+%        6
+%        5
+%        5
+%   i2 =
+%        1
+%        2
+%        4
+%
+%   This indicates that the character arrays at indices 6 and 5 have
+%   duplicates, 5 having two duplicates. The duplicate for index 6 is
+%   at index 1, the duplicates for index 5 are at indices 2 and 4.
+%
+%   More examples
 %
 %   Run findduplicatesdemo for more examples of FINDDUPLICATES based on
 %   the examples of the unique function. See the contents of
