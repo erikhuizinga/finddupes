@@ -1,7 +1,7 @@
 %FINDDUPLICATESDEMO
-%   FINDDUPLICATESDEMO is a demonstration of finddupes based on all
+%   FINDDUPLICATESDEMO is a demonstration of findduplicates based on all
 %   documentation examples of the unique function. Run each section by
-%   pressing CTRL+SHIFT+RETURN (on Windows).
+%   pressing CTRL + SHIFT + ENTER (on Windows).
 %
 %   See also FINDDUPLICATES
 
@@ -23,67 +23,66 @@
 %% unique example 1: Unique Values in Vector
 clc, clear
 
-A = [9 2 9 9 5]
+A = [9, 2, 9, 5]
 C = unique(A)
-[i1,i2] = findduplicates(A)
+[i1, i2] = findduplicates(A)
 
 %% unique example 2: Unique Rows in Table
 clc, clear
 
-Name = {'Fred';'Betty';'Bob';'George';'Jane';'Harry'};
-Age = [38;43;38;40;38;38];
-Height = [71;69;64;67;64;64];
-Weight = [176;163;131;185;131;131];
+Name = {'Fred'; 'Betty'; 'Bob'; 'George'; 'Jane'};
+Age = [38; 43; 38; 40; 38];
+Height = [71; 69; 64; 67; 64];
+Weight = [176; 163; 131; 185; 131];
 
-A = table(Age,Height,Weight,'RowNames',Name)
+A = table(Age, Height, Weight, 'RowNames', Name)
 
 C = unique(A)
-[i1,i2] = findduplicates(A)
+[i1, i2] = findduplicates(A)
 
 %% unique example 3: Unique Values and Their Indices
-% N/A, because for finddupes it is identical to example 1
-clc, clear
+% N/A, because for findduplicates it is identical to example 1
 
 %% unique example 4: Unique Rows in Matrix
 clc, clear
 
-A = [9 2 9 5; 9 2 9 0; 9 2 9 5]
-[C, ia, ic] = unique(A,'rows')
-[i1,i2] = findduplicates(A,'rows')
+A = randi(3, 12, 3)
+[C, ia, ic] = unique(A(:, 1:2), 'rows')
+[i1, i2] = findduplicates(A(:, 1:2), 'rows')
 
 %% unique example 5: Unique Values in Vector with Specified Order
 clc, clear
 
-A = [9 2 9 5]
-[C, ia, ic] = unique(A,'stable')
-[i1,i2] = findduplicates(A,'stable')
+A = [9, 2, 9, 5]
+[C, ia, ic] = unique(A, 'stable')
+[i1, i2] = findduplicates(A, 'stable')
 
 %% unique example 6: Unique Values in Array Containing NaNs
 clc, clear
 
-A = [5 5 NaN NaN]
+A = [5, 5, NaN, NaN]
 C = unique(A)
-[i1,i2] = findduplicates(A)
+[i1, i2] = findduplicates(A)
 
-%% unique example 7: Unique Entries in Cell Array of Strings
+%% unique example 7: Unique Entries in Cell Array of Character Vectors
 clc, clear
 
-A = {'one','two','twenty-two','One','two'}
+A = {'one', 'two', 'twenty-two', 'One', 'two'}
 C = unique(A)
-[i1,i2] = findduplicates(A)
+[i1, i2] = findduplicates(A)
 
-%% unique example 8: Cell Array of Strings with Trailing White Space
+%% unique example 8: Cell Array of Character Vectors with Trailing White Space
 % This example is also a demo where A contains no duplicates, thus i1 and
 % i2 are returned empty.
 clc, clear
 
-A = {'dog','cat','fish','horse','dog ','fish '}
+A = {'dog', 'cat', 'fish', 'horse', 'dog ', 'fish '}
 C = unique(A)
-[i1,i2] = findduplicates(A)
+[i1, i2] = findduplicates(A)
 
 %% unique example 9: Preserve Legacy Behavior of unique
 clc, clear
 
-A = [9 2 9 5]
-[C2, ia2, ic2] = unique(A, 'legacy')
-[i1,i2] = findduplicates(A, 'legacy')
+A = [9, 2, 9, 5]
+[C, ia, ic] = unique(A, 'legacy')
+[i1, i2] = findduplicates(A, 'legacy')
