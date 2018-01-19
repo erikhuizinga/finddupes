@@ -18,6 +18,8 @@
 %   [i1, i2, C, ia, ic] = FINDDUPLICATES(A, 'rows', occurrence, 'legacy')
 %   [i1, i2, C, ia, ic] = FINDDUPLICATES(A, occurrence, 'rows', 'legacy')
 %
+%   Description
+%
 %   [i1, i2] = FINDDUPLICATES(A) finds the linear indices of duplicates
 %   in input A. The accepted input arguments are the same as accepted by
 %   the unique function. The first output, i1, contains the linear indices
@@ -33,7 +35,7 @@
 %   [i1, i2] = FINDDUPLICATES(A, occurence) specifies which duplicate to
 %   consider as the first, occurence can be 'first' (default) or 'last'.
 %
-%   [i1, i2] = FINDDUPLICATES(A, __, 'rows') and [i1, i2] = 
+%   [i1, i2] = FINDDUPLICATES(A, __, 'rows') and [i1, i2] =
 %   FINDDUPLICATES(A, 'rows', __) treat each row of A as a single entity
 %   and returns indices of duplicate rows. You must specify A and
 %   optionally can specify setOrder or occurence. The 'rows' option does
