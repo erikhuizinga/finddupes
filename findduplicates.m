@@ -45,8 +45,8 @@
 %
 %   The syntaxes with the 'legacy' option preserve the behaviour this
 %   function would have on R2012b and prior releases. The 'legacy' option
-%   does not support categorical arrays, datetime arrays, duration arrays,
-%   tables or timetables.
+%   must be the last input argument. It does not support categorical
+%   arrays, datetime arrays, duration arrays, tables or timetables.
 %
 %   Examples
 %
@@ -75,13 +75,8 @@
 %
 %   Notes
 %
-%    - The 'stable' flag of the unique function has no functionality in
-%    FINDDUPLICATES, but is allowed for compatibility.
 %    - NaN are considered as distinct values by the unique function, thus
 %    they are considered non-duplicates by FINDDUPLICATES as well.
-%    - For completeness the third, fourth and fifth outputs are the three
-%    output arguments of the unique function: [i1, i2, C, ia, ic] =
-%    FINDDUPLICATES(__).
 %
 %   See also UNIQUE, IND2SUB, FINDDUPLICATESDEMO
 
