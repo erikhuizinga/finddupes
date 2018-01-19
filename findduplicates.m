@@ -1,7 +1,6 @@
 %FINDDUPLICATES Find linear indices of duplicates in input.
 %   This function accepts the same input arguments as the unique function,
-%   which is the basis for this function. FINDDUPLICATES has two output
-%   arguments, i1 and i2.
+%   which is the basis for this function.
 %
 %   Syntax
 %
