@@ -2,7 +2,7 @@
 
 # `findduplicates`, find linear indices of duplicates in input
 
-This function accepts the same input arguments as the [`unique`](http://mathworks.com/help/matlab/ref/unique.html) function, which is the basis for this function. `findduplicates` has two output arguments, `i1` and `i2`.
+This function accepts the same input arguments as the [`unique`](http://mathworks.com/help/matlab/ref/unique.html) function, which is the basis for this function.
 
 ## Syntax
 
