@@ -76,7 +76,7 @@ i2 =
 This indicates that the first element in `A` has a duplicate at the
 third element.
 
-### Find the last indices of duplicate character arrays and the other duplicate's indices
+### Find the last indices of duplicate character arrays and the other duplicates' indices
 
 ```MATLAB
 names = {'Charlie', 'Alice', 'Bob', 'Alice', 'Alice', 'Charlie'};
