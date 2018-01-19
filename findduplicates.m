@@ -73,7 +73,7 @@
 %   third element.
 %
 %   Find the last indices of duplicate character arrays and the other
-%   duplicate's indices:
+%   duplicates' indices:
 %
 %   names = {'Charlie', 'Alice', 'Bob', 'Alice', 'Alice', 'Charlie'};
 %   [i1, i2] = FINDDUPLICATES(names, 'last')
